@@ -41,16 +41,16 @@
           <Property Name="FloorArea" Type="Int16" Nullable="false" />
           <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="RealEstateEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Flat" EntityType="Self.Flat" />
+        <EntityContainer Name="RealEstateEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Flats" EntityType="Self.Flat" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="RealEstateModelStoreContainer" CdmEntityContainer="RealEstateEntities">
-          <EntitySetMapping Name="Flat">
+        <EntityContainerMapping StorageEntityContainer="RealEstateModelStoreContainer" CdmEntityContainer="RealEstateEntities2">
+          <EntitySetMapping Name="Flats">
             <EntityTypeMapping TypeName="RealEstateModel.Flat">
               <MappingFragment StoreEntitySet="Flat">
                 <ScalarProperty Name="FlatSK" ColumnName="FlatSK" />
@@ -79,7 +79,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
