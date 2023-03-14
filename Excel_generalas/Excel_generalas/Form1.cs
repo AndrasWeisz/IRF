@@ -12,9 +12,19 @@ namespace Excel_generalas
 {
     public partial class Form1 : Form
     {
+        List<Flat> _flats;
+        RealEstateEntities2 context = new RealEstateEntities2();
         public Form1()
         {
             InitializeComponent();
+            LoadData();
         }
+
+        void LoadData()
+        {
+            _flats = context.Flats.ToList();
+        }
+
+        
     }
 }
