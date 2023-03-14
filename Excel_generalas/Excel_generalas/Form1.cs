@@ -95,7 +95,7 @@ namespace Excel_generalas
                 values[counter, 5] = f.NumberOfRooms;
                 values[counter, 6] = f.FloorArea;
                 values[counter, 7] = f.Price;
-                values[counter, 8] = "";
+                values[counter, 8] = "=" + GetCell(counter + 2, 8) + "/" + GetCell(counter + 2, 7) + "*1000000";
                 counter++;
             }
             xlSheet.get_Range(
